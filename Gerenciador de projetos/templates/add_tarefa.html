@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+
+{% block link %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styleAddTarefa.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Adicionar Nova Tarefa</h1>
+    <form action="{{ url_for('add_tarefa', id_projeto=id_projeto) }}" method="POST">
+        <div>
+            <label for="nome">Nome da Tarefa:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        <div>
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" required></textarea>
+        </div>
+        <div>
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="pendente">Pendente</option>
+                <option value="em progresso">Em Progresso</option>
+                <option value="concluída">Concluída</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Adicionar Tarefa</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

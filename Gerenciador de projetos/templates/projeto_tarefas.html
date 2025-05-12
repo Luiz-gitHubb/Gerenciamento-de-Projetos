@@ -1,0 +1,52 @@
+{% extends "index.html" %}
+
+{% block link %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styleTarefas.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="projeto-header">
+        {% if projeto.imagem %}
+        <img src="{{ url_for('static', filename=projeto.imagem) }}" alt="Imagem do Projeto">
+        {% endif %}
+        <div class="info">
+            <h1>{{ projeto.nome }}</h1>
+            <p class="descricao">{{ projeto.descricao }}</p>
+            <p class="data">Criado em: {{ projeto.data_criacao }}</p>
+        </div>
+    </div>
+
+    <h2>Tarefas do Projeto</h2>
+
+    <!-- Botão Criar Nova Tarefa -->
+    <a href="{{ url_for('add_tarefa', id_projeto=id) }}">
+        <button class="btn-criar-tarefa">Criar Nova Tarefa</button>
+    </a>
+
+
+    {% if tarefas %}
+        <ul class="lista-tarefas">
+            {% for tarefa in tarefas %}
+                <li>
+                    <strong>{{ tarefa.nome }}</strong><br>
+                    <em>{{ tarefa.descricao }}</em><br>
+                    <span>Status: {{ tarefa.status }}</span><br>
+
+                    <a href="{{ url_for('edit_tarefa', id_projeto=id, id_tarefa=tarefa.id) }}">
+                        <button>Editar</button>
+                    </a>
+
+                    <form action="{{ url_for('delete_tarefa', id_projeto=id, id_tarefa=tarefa.id) }}" method="POST" style="display:inline;">
+                        <button type="submit" onclick="return confirm('Tem certeza que deseja excluir esta tarefa?')">Excluir</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="sem-tarefas">Este projeto ainda não possui tarefas.</p>
+    {% endif %}
+</div>
+{% endblock %}
+
+

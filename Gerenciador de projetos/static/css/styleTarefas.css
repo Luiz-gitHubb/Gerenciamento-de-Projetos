@@ -1,0 +1,137 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.projeto-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.projeto-header img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.projeto-header .info {
+    flex: 1;
+}
+
+.projeto-header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.descricao {
+    margin: 10px 0;
+    color: #555;
+}
+
+.data {
+    font-size: 14px;
+    color: #888;
+}
+
+h2 {
+    margin-top: 40px;
+    font-size: 22px;
+    color: #444;
+}
+
+.lista-tarefas {
+    list-style: disc inside;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.lista-tarefas li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #007BFF;
+    border-radius: 4px;
+    color: #333;
+}
+
+.sem-tarefas {
+    margin-top: 20px;
+    font-style: italic;
+    color: #777;
+}
+
+/* Estilo para o botão de criar nova tarefa */
+.btn-criar-tarefa {
+    background-color: #4CAF50; /* Cor verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.btn-criar-tarefa:hover {
+    background-color: #45a049; /* Cor um pouco mais escura ao passar o mouse */
+}
+
+.lista-tarefas {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista-tarefas li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.lista-tarefas li strong {
+    font-size: 18px;
+}
+
+.lista-tarefas li em {
+    font-size: 14px;
+    color: #555;
+}
+
+.lista-tarefas li span {
+    font-size: 14px;
+    color: #888;
+}
+
+.lista-tarefas li button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.lista-tarefas li button:hover {
+    background-color: #0056b3;
+}
+
+.lista-tarefas li form button {
+    background-color: #dc3545;
+}
+
+.lista-tarefas li form button:hover {
+    background-color: #c82333;
+}

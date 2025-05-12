@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% block link %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styleLista_projetos.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Projetos</h1>
+    <a href="{{ url_for('add_projeto_form') }}" class="btn-adicionar">+ Novo Projeto</a>
+
+    <div class="lista-projetos">
+        {% for id, projeto in projetos.items() %}
+        <div class="projeto-card" id="projeto-{{ id }}">
+            <div class="conteudo">
+                {% if projeto.imagem %}
+                <img src="{{ url_for('static', filename=projeto.imagem) }}" alt="Imagem do Projeto">
+                {% endif %}
+                <div>
+                    <h2>{{ projeto.nome }}</h2>
+                    <p>{{ projeto.descricao }}</p>
+                    <p><strong>Criado em:</strong> {{ projeto.data_criacao }}</p>
+                    <a href="{{ url_for('ver_projeto', id=id) }}" class="btn-ver">Ver Tarefas</a>
+                    <a href="{{ url_for('edit_projeto', id=id) }}" class="btn-editar">Editar</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

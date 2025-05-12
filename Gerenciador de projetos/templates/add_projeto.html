@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+
+{% block link %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styleAddProjeto.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="form-container">
+    <h1>Criar Novo Projeto</h1>
+    <form action="{{ url_for('add_projeto') }}" method="POST" enctype="multipart/form-data">
+        <label for="nome">Nome do Projeto:</label>
+        <input type="text" name="nome" id="nome" required>
+
+        <label for="descricao">Descrição:</label>
+        <textarea name="descricao" id="descricao" required></textarea>
+
+        <label for="imagem">Imagem (opcional):</label>
+        <input type="file" name="imagem" id="imagem">
+
+        <button type="submit" class="btn-submit">Criar Projeto</button>
+    </form>
+    <a href="{{ url_for('lista_projetos') }}" class="btn-cancelar">Cancelar</a>
+</div>
+{% endblock %}

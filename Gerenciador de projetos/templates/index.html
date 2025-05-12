@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Define o idioma da página como inglês -->
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização para dispositivos móveis -->
+    <!-- Link para o CSS do menu de navegação -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styleNav.css')}}">
+    <!-- Ícone exibido na aba do navegador -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/tarefa_icon.png') }}">
+
+    <!-- Bloco opcional para adicionar mais arquivos CSS ou links em páginas específicas -->
+    {% block link %}
+    {% endblock %}
+
+    <!-- Título da página -->
+    <title>Gerenciador de tarefas</title>
+</head>
+<body>
+    
+    <!-- Inclui o conteúdo do arquivo nav.html (barra de navegação) -->
+    {% include "nav.html" %}
+
+    <!-- Bloco principal de conteúdo da página, que será preenchido por templates filhos -->
+    {% block body %}
+    {% endblock %}
+    
+</body>
+</html>

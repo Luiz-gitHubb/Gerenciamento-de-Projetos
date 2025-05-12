@@ -1,0 +1,100 @@
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Lista de projetos com display block para alinhamento vertical */
+.lista-projetos {
+  display: block;  /* Aqui, usamos block para alinhar os projetos em linha reta, um abaixo do outro */
+  gap: 1rem;
+}
+
+/* Estilo para cada card do projeto */
+.projeto-card {
+  background: rgb(236, 230, 230);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(142, 195, 226);
+  margin-bottom: 1rem; /* Garantir um espaçamento entre os cards */
+}
+
+/* Estilo da imagem no card do projeto */
+.projeto-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Estilo do conteúdo do card */
+.projeto-card .conteudo {
+  display: flex;
+  flex-direction: column;
+}
+
+.projeto-card h2 {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+.projeto-card p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Estilos dos botões */
+.btn-ver, .btn-editar, .btn-salvar {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-ver {
+  background-color: #2196F3;
+}
+
+.btn-editar {
+  background-color: #FFC107;
+}
+
+.btn-salvar {
+  background-color: #007BFF;
+}
+
+.btn-editar:hover, .btn-ver:hover, .btn-salvar:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para o botão + Novo Projeto */
+.btn-adicionar {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.btn-adicionar:hover {
+  background-color: #45a049;
+}
+
+.btn-adicionar:active {
+  background-color: #3e8e41;
+}

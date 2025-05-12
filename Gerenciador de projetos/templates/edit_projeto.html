@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+{% block link %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styleEditProjeto.css') }}">
+{% endblock %}
+
+{% block body %}
+<form action="{{ url_for('up_projeto') }}" method="POST" enctype="multipart/form-data" class="form-container">
+    <input type="hidden" name="id" value="{{ id }}">
+
+    <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" value="{{ projeto['nome'] }}" required>
+    </div>
+
+    <div class="form-group">
+        <label for="descricao">Descrição:</label>
+        <textarea name="descricao" id="descricao" required>{{ projeto['descricao'] }}</textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="imagem">Nova Imagem (opcional):</label>
+        <input type="file" name="imagem" id="imagem">
+    </div>
+
+    <div class="form-actions">
+        <button type="submit">Salvar Alterações</button>
+    </div>
+</form>
+{% endblock %}

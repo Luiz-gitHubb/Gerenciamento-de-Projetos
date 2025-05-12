@@ -1,0 +1,25 @@
+{# Estende o layout base chamado "index.html" #}
+{% extends "index.html" %}
+
+{# Bloco para incluir o CSS específico da página de homepage #}
+{% block link %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/styleHomepage.css') }}">
+{% endblock %}
+
+{# Bloco do corpo principal da página #}
+{% block body %}
+    <div class="homepage-container"> <!-- Container principal da homepage -->
+
+        <!-- Seção para a imagem (provavelmente uma imagem de fundo ou destaque) -->
+        <div class="image-section">
+            <!-- Exibe a imagem com o caminho dinâmico obtido pela variável 'Inicio' -->
+            <img src="{{ url_for('static', filename=Inicio) }}" alt="ImagemHome">
+        </div>
+
+        <!-- Seção de conteúdo com título e texto -->
+        <div class="content-section">
+            <h1>{{Titulo}}</h1> <!-- Exibe o título dinâmico passado para o template -->
+            <p>{{Texto}}</p> <!-- Exibe o texto dinâmico passado para o template -->
+        </div>
+    </div>
+{% endblock %}

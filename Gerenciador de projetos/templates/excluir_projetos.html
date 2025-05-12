@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+{% block link %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styleExcluir_projetos.css') }}">
+{% endblock %}
+{% block body %}
+<div class="container">
+    <h1>Excluir Projetos</h1>
+    {% if projetos %}
+        <div class="lista-projetos">
+            {% for id, projeto in projetos.items() %}
+                <div class="projeto">
+                    <h3>{{ projeto.nome }}</h3>
+                    <p>{{ projeto.descricao }}</p>
+                    <form action="{{ url_for('delete_projeto', id=id) }}" method="post">
+                        <button type="submit" class="btn-excluir">Excluir Projeto</button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="mensagem">Nenhum projeto para excluir.</p>
+    {% endif %}
+</div>
+{% endblock %}

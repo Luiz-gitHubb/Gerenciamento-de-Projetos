@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+
+{% block link %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleEditTarefa.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Editar Tarefa</h1>
+    <form action="{{ url_for('edit_tarefa', id_projeto=id_projeto, id_tarefa=id_tarefa) }}" method="POST">
+        <div>
+            <label for="nome">Nome da Tarefa:</label>
+            <input type="text" id="nome" name="nome" value="{{ tarefa['nome'] }}" required>
+        </div>
+        <div>
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" required>{{ tarefa['descricao'] }}</textarea>
+        </div>
+        <div>
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="pendente" {% if tarefa['status'] == 'pendente' %}selected{% endif %}>Pendente</option>
+                <option value="em progresso" {% if tarefa['status'] == 'em progresso' %}selected{% endif %}>Em Progresso</option>
+                <option value="concluída" {% if tarefa['status'] == 'concluída' %}selected{% endif %}>Concluída</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Salvar Alterações</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

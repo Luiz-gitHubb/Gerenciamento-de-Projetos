@@ -1,0 +1,99 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+/* Container principal para alinhar os elementos */
+.homepage-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* Estilização da seção de imagem (lado esquerdo) */
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 2rem;
+}
+
+.image-section img {
+  max-width: 100%;
+  max-height: 80vh;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0);
+  transition: transform 0.3s ease;
+  background-color: transparent; /* Garante fundo transparente */
+}
+
+/* Estilização da seção de conteúdo (lado direito) */
+.content-section {
+  flex: 1;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Estilização do título com a cor desejada especificada */
+.content-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #1f1b42; /* A cor que você mostrou */
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Estilização do texto */
+.content-section p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #000000;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .homepage-container {
+    flex-direction: column-reverse; /* Inverte a ordem para mobile - texto primeiro, imagem depois */
+    padding: 2rem 1rem;
+    height: auto;
+    min-height: 100vh;
+}
+  
+  body {
+    overflow-y: auto; /* Permite rolagem em telas pequenas */
+  }
+  
+  .image-section, .content-section {
+    flex: none;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  
+  .image-section img {
+    max-height: 50vh;
+  }
+  
+  .content-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .content-section p {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,38 @@
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.lista-projetos {
+    display: grid;
+    gap: 1rem;
+}
+
+.projeto {
+    background: #ffe0e0;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255,0,0,0.1);
+}
+
+.btn-excluir {
+    padding: 0.4rem 0.8rem;
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mensagem {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #999;
+}
