@@ -92,7 +92,8 @@ Este projeto utiliza **Flask (Python)** com **arquivos CSV** como solução de p
 - **Descrição**: Página inicial com imagem e texto de introdução.
 - **Template**: `homepage.html`
 
-![image.png](attachment:91f6fbbe-fe31-4a8a-9e7e-64804c494a32:image.png)
+![home page](https://github.com/user-attachments/assets/8cb8c5dd-baf0-4bbd-b348-980e10da4f7d)
+
 
 ---
 
