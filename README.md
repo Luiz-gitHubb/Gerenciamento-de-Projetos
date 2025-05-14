@@ -103,7 +103,8 @@ Este projeto utiliza **Flask (Python)** com **arquivos CSV** como solução de p
 - **Descrição**: Mostra todos os projetos existentes.
 - **Template**: `lista_projetos.html`
 
-![image.png](attachment:467b1c0d-d13e-414d-8c24-453cb94bf2f0:image.png)
+![lista de projeto](https://github.com/user-attachments/assets/34f3fdc4-b639-4721-82b2-d20ab35fa7fc)
+
 
 ---
 
@@ -116,8 +117,9 @@ Este projeto utiliza **Flask (Python)** com **arquivos CSV** como solução de p
     - Descrição
     - Imagem (upload)
 - **Template**: `add_projeto.html`
+  
+![adicionar projeto](https://github.com/user-attachments/assets/03c6e54e-2a11-41f6-8fe0-b5765a39a240)
 
-![image.png](attachment:46f26a0b-49c0-441e-9738-9b952b7bef0b:image.png)
 
 ---
 
@@ -127,7 +129,8 @@ Este projeto utiliza **Flask (Python)** com **arquivos CSV** como solução de p
 - **Rota POST**: `/up_projeto`
 - **Template**: `edit_projeto.html`
 
-![image.png](attachment:99919ca6-46ec-4bd5-9fcb-c9742635129e:image.png)
+![editar projetos](https://github.com/user-attachments/assets/cac43925-c0f4-41c3-9f49-e888f6005e9a)
+
 
 ---
 
@@ -136,7 +139,8 @@ Este projeto utiliza **Flask (Python)** com **arquivos CSV** como solução de p
 - **Rota POST**: `/delete_projeto/<int:id>`
 - Remove o projeto e todas as tarefas associadas.
 
-![image.png](attachment:c319a70f-8887-4cd3-90b0-1a3ece7599ee:image.png)
+![excluir projeto](https://github.com/user-attachments/assets/81e7c712-900d-40ba-8c7a-47ec8ee32250)
+
 
 ---
 
@@ -145,7 +149,7 @@ Este projeto utiliza **Flask (Python)** com **arquivos CSV** como solução de p
 - **Rota**: `/projeto/<int:id>`
 - **Template**: `projeto_tarefas.html`
 
-![image.png](attachment:65d6b6fd-60bf-4966-9d11-2b234cdfe002:image.png)
+![Captura de tela 2025-05-13 211146](https://github.com/user-attachments/assets/ea51c5b9-9b55-4390-b973-c8ea78cb10e5)
 
 ---
 
@@ -158,7 +162,8 @@ Este projeto utiliza **Flask (Python)** com **arquivos CSV** como solução de p
     - Status (ex: "Pendente", "Concluído")
 - **Template**: `add_tarefa.html`
 
-![image.png](attachment:202f21ce-4ab0-4af7-8a55-08347aef22e1:image.png)
+![Captura de tela 2025-05-13 211225](https://github.com/user-attachments/assets/5d8c183f-132b-40cc-beac-fbd13bb7bbd2)
+
 
 ---
 
@@ -167,7 +172,8 @@ Este projeto utiliza **Flask (Python)** com **arquivos CSV** como solução de p
 - **Rota GET/POST**: `/edit_tarefa/<int:id_projeto>/<int:id_tarefa>`
 - **Template**: `edit_tarefa.html`
 
-![image.png](attachment:d2933398-b271-41f4-b29b-2eb0901c6f74:image.png)
+![Captura de tela 2025-05-13 211342](https://github.com/user-attachments/assets/747fcaaa-1dde-4f7a-8513-e6204689f1fe)
+
 
 ---
 
@@ -175,7 +181,8 @@ Este projeto utiliza **Flask (Python)** com **arquivos CSV** como solução de p
 
 - **Rota POST**: `/delete_tarefa/<int:id_projeto>/<int:id_tarefa>`
 
-![image.png](attachment:07d28914-c650-4a5f-b1a2-91902d39d412:image.png)
+![Captura de tela 2025-05-13 211443](https://github.com/user-attachments/assets/5f54238d-54a7-49c5-9993-e87a20f5ffed)
+
 
 ---
 
@@ -184,7 +191,8 @@ Este projeto utiliza **Flask (Python)** com **arquivos CSV** como solução de p
 - **Rota GET**: `/excluir_projetos`
 - **Template**: `excluir_projetos.html`
 
-![image.png](attachment:175cac22-9bf4-4655-ab1b-808620ff120d:image.png)
+![Captura de tela 2025-05-13 211526](https://github.com/user-attachments/assets/84cfe8ed-d8c9-42af-95ca-75e5ca72862c)
+
 
 ---
 
